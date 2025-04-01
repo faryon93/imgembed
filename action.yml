@@ -1,0 +1,14 @@
+name: "imgembed"
+description: "Embed all <img> tags in a html document as base64 encoded images"
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.input_file }}
+    - ${{ inputs.output_file }}
+
+inputs:
+  input_file:
+    required: true
+  output_file:
+    required: true
